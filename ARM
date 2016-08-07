@@ -1,5 +1,141 @@
 {
-  "title": "Press Space or double-click to edit",
+  "title": "ARM",
   "id": 1,
-  "formatVersion": 2
+  "formatVersion": 2,
+  "ideas": {
+    "1": {
+      "title": "Coretex-M3/4",
+      "id": 2,
+      "ideas": {
+        "1": {
+          "title": "Intro",
+          "id": 3,
+          "ideas": {
+            "1": {
+              "title": "features",
+              "id": 4,
+              "ideas": {
+                "1": {
+                  "title": "3-stage pipelining",
+                  "id": 5
+                },
+                "2": {
+                  "title": "On-chip bus interfaces based on AMBA technology",
+                  "id": 6,
+                  "ideas": {
+                    "1": {
+                      "title": "allows pipelined bus operations for higher thoughput",
+                      "id": 7
+                    }
+                  }
+                },
+                "3": {
+                  "title": "NVIC",
+                  "id": 8,
+                  "ideas": {
+                    "1": {
+                      "title": "240 interrupt requests",
+                      "id": 9
+                    },
+                    "2": {
+                      "title": "8 to 256 priorities (depending on the device)",
+                      "id": 10
+                    }
+                  }
+                },
+                "4": {
+                  "title": "OS support",
+                  "id": 11,
+                  "ideas": {
+                    "1": {
+                      "title": "System tick timer",
+                      "id": 12
+                    },
+                    "2": {
+                      "title": "Shadowed stack pointer",
+                      "id": 13
+                    }
+                  }
+                },
+                "5": {
+                  "title": "Sleep mode",
+                  "id": 14
+                },
+                "6": {
+                  "title": "MPU (optional)",
+                  "id": 15,
+                  "ideas": {
+                    "1": {
+                      "title": "programmable memory",
+                      "id": 16
+                    },
+                    "2": {
+                      "title": "access permission control",
+                      "id": 17
+                    }
+                  }
+                },
+                "7": {
+                  "title": "Bit band",
+                  "id": 18,
+                  "attr": {
+                    "attachment": {
+                      "contentType": "text/html",
+                      "content": "http://infocenter.arm.com/help/index.jsp?topic=/com.arm.doc.dai0179b/CHDJHIDF.html<br>https://developer.mbed.org/cookbook/bit-banding<br><br>Notes:<br><tbody><tr><td class=\"codify_screen\"><pre>alias_word_address&nbsp;=&nbsp;alias_region_base&nbsp;+&nbsp;(bit_band_byte_offset&nbsp;x <span class=\"SH_NUMBER\">8 x 4</span>)&nbsp;+&nbsp;(bit_number&nbsp;x&nbsp;<span class=\"SH_NUMBER\">4</span>)&nbsp;\n<br>bit_band_byte_offset is multiplied by 32 in the above formula because a byte offset of one<br>(or 8 bits) in the bit-band region corresponds to word offset of 8 (or byte offset of 32) <br>in the alias region.<br></pre></td></tr></tbody><img src=\"https://developer.mbed.org/media/uploads/rod_vdb/xarm_bit-band.png.pagespeed.ic.5rnTt1cKVy.png\" alt=\"/media/uploads/rod_vdb/arm_bit-band.png\" title=\"/media/uploads/rod_vdb/arm_bit-band.png\">"
+                    },
+                    "style": {}
+                  },
+                  "ideas": {
+                    "1": {
+                      "title": "one 1MB bit-band region mapped to 32MB virtual alias regions each in",
+                      "id": 23,
+                      "ideas": {
+                        "1": {
+                          "title": "SRAM memory",
+                          "id": 24
+                        },
+                        "2": {
+                          "title": "Peripheral memory",
+                          "id": 25
+                        }
+                      }
+                    }
+                  }
+                },
+                "8": {
+                  "title": "instructions",
+                  "id": 26,
+                  "ideas": {
+                    "1": {
+                      "title": "M4 specific",
+                      "id": 27,
+                      "ideas": {
+                        "1": {
+                          "title": "SIMD",
+                          "id": 28
+                        },
+                        "2": {
+                          "title": "Saturating arithmetic",
+                          "id": 29
+                        },
+                        "3": {
+                          "title": "single precision floating point",
+                          "id": 30
+                        },
+                        "4": {
+                          "title": "Additional fast MAC and multiply instructions",
+                          "id": 31
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "links": []
 }
